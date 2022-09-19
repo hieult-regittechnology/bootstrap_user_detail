@@ -152,7 +152,7 @@ header {
                 }
             }
         }
-        .button1 {
+        .button-not-approved {
             @include flex;
             justify-content: flex-end;
             .not-approved {
@@ -164,7 +164,7 @@ header {
                 }
             }
         }
-        .button2 {
+        .button-delete-post {
             @include flex;
             justify-content: flex-end;
             .delete-post {
@@ -226,7 +226,6 @@ header {
             textarea {
                 margin: 30px auto;
                 width: 100%;
-                height: 82px;
                 resize: none;
                 border: 1px solid #e1e1e1;
                 border-radius: 4px;

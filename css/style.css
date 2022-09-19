@@ -237,13 +237,13 @@ header .container .row .pc-header .header-account .account-circle {
   font-family: Noto Sans JP;
   color: #a7a7a7;
 }
-.posts .container .button1 {
+.posts .container .button-not-approved {
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: flex-end;
 }
-.posts .container .button1 .not-approved {
+.posts .container .button-not-approved .not-approved {
   font-size: 15px;
   font-weight: 500;
   font-style: normal;
@@ -253,18 +253,18 @@ header .container .row .pc-header .header-account .account-circle {
   margin: 0 -40px 0 0;
 }
 @media screen and (max-width: 576px) {
-  .posts .container .button1 .not-approved {
+  .posts .container .button-not-approved .not-approved {
     margin: 0 -30px 0 0;
     font-size: 10px;
   }
 }
-.posts .container .button2 {
+.posts .container .button-delete-post {
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: flex-end;
 }
-.posts .container .button2 .delete-post {
+.posts .container .button-delete-post .delete-post {
   font-size: 15px;
   font-weight: 500;
   font-style: normal;
@@ -275,7 +275,7 @@ header .container .row .pc-header .header-account .account-circle {
   border-radius: 3px;
 }
 @media screen and (max-width: 576px) {
-  .posts .container .button2 .delete-post {
+  .posts .container .button-delete-post .delete-post {
     font-size: 10px;
   }
 }
@@ -353,7 +353,6 @@ header .container .row .pc-header .header-account .account-circle {
 .posts .container .comment-textarea textarea {
   margin: 30px auto;
   width: 100%;
-  height: 82px;
   resize: none;
   border: 1px solid #e1e1e1;
   border-radius: 4px;

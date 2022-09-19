@@ -1,204 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Blog</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css" />
-</head>
-<body>
-    <!------------------------ Header ---------------------------------->
-    <header id="header">
-        <div class="container">
-            <div class="row">
-                <div class="mobile-header">
-                    <div class="col-md-0 col-4">
-                        <div class="hamburger" >
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Detail Blog</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <!------------------------ Header ---------------------------------->
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="mobile-header">
+                        <div class="col-4">
+                            <div class="hamburger" >
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-0 col-4">
-                        <nav class="header-logo">
-                            <div class="logo">
-                                <a href="#"><img src="./assets/images/logo.png"></a>
-                            </div>
-                            <div class="logo-title">
-                                <nav>RT-Blogs</nav>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="col-md-0 col-4">
-                        <img src="./assets/images/search.png" class="search-span"></img>
-                    </div>
-                </div>
-                <div class="pc-header">
-                    <div class="col-md-2">
-                        <nav class="header-logo">
-                            <div class="logo">
-                                <a href="#"><img src="./assets/images/logo.png"></a>
-                            </div>
-                            <div class="logo-title">
-                                <nav>RT-Blogs</nav>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="col-md-6 ">
-                        <nav class="search-form">
-                            <form>
-                                <div class="form-group">
-                                    <input type="text" placeholder="Search blog" name="search" class="search"/> 
-                                    <a href="#"><img src="./assets/images/search.png" class="search-span"></img></a>
+                        <div class="col-4">
+                            <nav class="header-logo">
+                                <div class="logo">
+                                    <a href="#"><img src="./assets/images/logo.png"></a>
                                 </div>
-                            </form>
-                        </nav>
-                    </div>
-                    <div class="col-md-2">
-                        <nav class="header-menu nav-menu">
-                            <div class="nav-link">Top</div>
-                            <div class="header-menu-item"><a href="#" class="nav-link">Create Blog</a></div>
-                        </nav>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="header-account nav-menu">
-                            <a href="#" class="nav-link">myname</a>
-                            <span class="material-symbols-outlined account-circle">
-                            account_circle
-                            </span>
+                                <div class="logo-title">
+                                    <nav>RT-Blogs</nav>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="col-4">
+                            <img src="./assets/images/search.png" class="search-span"></img>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </header>
-<!------------------------ Post ---------------------------------->
-<section class="posts">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <p class="direction"><span class="home-direction">Home </span><span class="arrow-direction">> </span>Detail Blog</p>
-            </div>
-            <div class="col-md-12">
-                <h3 class="title">My cat is like the boss</h3>
-            </div> 
-            <div class="col-md-8 col-3 info">
-                <img class="avatar" src="./assets/images/avatar.png">
-                <div class="user-info">
-                <h5>My name</h5>
-                <h6>05/09/2022</h6>
-            </div>
-            </div>
-            <div class="col-md-2 col-5 button1">
-                <button type="button" class="btn btn-secondary not-approved" disabled>Not approved</button>
-            </div>
-            <div class="col-md-2 col-4 button2">
-                <button type="button" class="btn btn-secondary delete-post">Delete Post</button>
-            </div>
-            <div class="col-md-12 title-image">
-                <img src="./assets/images/post-picture.png">
-            </div>
-            <div class="col-md-12 content">
-                <p>Because she is. At least in her mind. Cats are affectionately narcissistic in a very subtle. It's like somehow they just know that in ancient Egypt they were once worshipped as Gods and that is their self image that's natural to them. This is only my opinion based on the cats that I have lived with.</p>
-            </div>
-            <div class="col-md-12 related">
-                <h3>Related</h3>
-            </div>
-            <div class="col-md-12 line">
-                <img src="./assets/images/line.png">
-            </div>
-            <div class="col-md-3 col-6">
-                <div class="related-post">
-                    <img src="./assets/images/post-picture.png">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h3>Lorem ipsum dolor sit amet,  adipiscing elit.</h3>
+                    <div class="pc-header">
+                        <div class="col-md-2">
+                            <nav class="header-logo">
+                                <div class="logo">
+                                    <a href="#"><img src="./assets/images/logo.png"></a>
+                                </div>
+                                <div class="logo-title">
+                                    <nav>RT-Blogs</nav>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="col-md-6 ">
+                            <nav class="search-form">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Search blog" name="search" class="search"/> 
+                                        <a href="#"><img src="./assets/images/search.png" class="search-span"></img></a>
+                                    </div>
+                                </form>
+                            </nav>
+                        </div>
+                        <div class="col-md-2 ">
+                            <nav class="header-menu nav-menu">
+                                <div class="nav-link">Top</div>
+                                <div class="header-menu-item"><a href="#" class="nav-link">Create Blog</a></div>
+                            </nav>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="header-account nav-menu">
+                                <a href="#" class="nav-link">myname</a>
+                                <span class="material-symbols-outlined account-circle">
+                                account_circle
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-6">
-                <div class="related-post">
-                    <img src="./assets/images/post-picture.png">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h3>Lorem ipsum dolor sit amet,  adipiscing elit.</h3>
+        </header>
+        <!------------------------ Post ---------------------------------->
+        <section class="posts">
+            <div class="container">
+                <div class="row">
+                    <p class="direction "><span class="home-direction">Home </span><span class="arrow-direction">> </span>Detail Blog</p>
+                    <h3 class="title">My cat is like the boss</h3>
+                    <div class="col-md-8 col-3 info">
+                        <img class="avatar" src="./assets/images/avatar.png">
+                        <div class="user-info">
+                            <h5>My name</h5>
+                            <h6>05/09/2022</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-5 button-not-approved">
+                        <button type="button" class="btn btn-secondary not-approved" disabled>Not approved</button>
+                    </div>
+                    <div class="col-md-2 col-4 button-delete-post">
+                        <button type="button" class="btn btn-secondary delete-post">Delete Post</button>
+                    </div>
+                    <div class="col-md-12 title-image">
+                        <img src="./assets/images/post-picture.png">
+                    </div>
+                    <div class="col-md-12 content">
+                        <p>Because she is. At least in her mind. Cats are affectionately narcissistic in a very subtle. It's like somehow they just know that in ancient Egypt they were once worshipped as Gods and that is their self image that's natural to them. This is only my opinion based on the cats that I have lived with.</p>
+                    </div>
+                    <div class="col-md-12 related">
+                        <h3>Related</h3>
+                    </div>
+                    <div class="col-md-12 line">
+                        <img src="./assets/images/line.png">
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="related-post">
+                            <img src="./assets/images/post-picture.png">
+                            <div class="container">
+                                <div class="row">
+                                    <h3>Lorem ipsum dolor sit amet,  adipiscing elit.</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-6">
-                <div class="related-post">
-                    <img src="./assets/images/post-picture.png">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h3>Lorem ipsum dolor sit amet,  adipiscing elit.</h3>
+                    <div class="col-md-3 col-6">
+                        <div class="related-post">
+                            <img src="./assets/images/post-picture.png">
+                            <div class="container">
+                                <div class="row">
+                                    <h3>Lorem ipsum dolor sit amet,  adipiscing elit.</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-6">
-                <div class="related-post">
-                    <img src="./assets/images/post-picture.png">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h3>Lorem ipsum dolor sit amet,  adipiscing elit.</h3>
+                    <div class="col-md-3 col-6">
+                        <div class="related-post">
+                            <img src="./assets/images/post-picture.png">
+                            <div class="container">
+                                <div class="row">
+                                    <h3>Lorem ipsum dolor sit amet,  adipiscing elit.</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-3 col-6">
+                        <div class="related-post">
+                            <img src="./assets/images/post-picture.png">
+                            <div class="container">
+                                <div class="row">
+                                    <h3>Lorem ipsum dolor sit amet,  adipiscing elit.</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 related">
+                        <h3>Comment</h3>
+                    </div>
+                    <div class="col-md-12 line">
+                        <img src="./assets/images/line.png">
+                    </div>
+                    <div class="col-md-1 col-2 avatar-comment">
+                        <img src="./assets/images/avatar-comment.png">
+                    </div>
+                    <div class="col-md-11 col-10 comment-textarea">
+                        <textarea rows="4"></textarea>
+                    </div>
+                    <div class="col-md-1 col-2 avatar-comment">
+                        <img src="./assets/images/avatar-comment.png">
+                    </div>
+                    <div class="col-md-11 col-10 comment-username">
+                        <h2>YourName</h2>
+                    </div>
+                    <div class="col-md-1 col-2"></div>
+                    <div class="col-md-11 col-10 comment-content">
+                        <h6>Yes, it’s right</h6>
+                    </div>
+                    <div class="col-md-1 col-2"></div>
+                    <div class="col-md-11 col-10 comment-time">
+                        <h6>30 phút trước</h6>
+                        <h6><a href="#">trả lời</a></h6>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-12 related">
-                <h3>Comment</h3>
+        </section>
+        <!------------------------ Footer ---------------------------------->
+        <footer>
+            <div class="container">
+                <div class="content">
+                    Copyright 2022. Made by Regit JSC
+                </div>
             </div>
-            <div class="col-md-12 line">
-                <img src="./assets/images/line.png">
-            </div>
-            <div class="col-md-1 col-2 avatar-comment">
-                <img src="./assets/images/avatar-comment.png">
-            </div>
-            <div class="col-md-11 col-10 comment-textarea">
-                <textarea></textarea>
-            </div>
-            <div class="col-md-1 col-2 avatar-comment">
-                <img src="./assets/images/avatar-comment.png">
-            </div>
-            <div class="col-md-11 col-10 comment-username">
-                <h2>YourName</h2>
-            </div>
-            <div class="col-md-1 col-2"></div>
-            <div class="col-md-11 col-10 comment-content">
-            <h6>Yes, it’s right</h6>
-            </div>
-            <div class="col-md-1 col-2"></div>
-            <div class="col-md-11 col-10 comment-time">
-            <h6>30 phút trước</h6>
-            <h6><a href="#">trả lời</a></h6>
-            </div>
-        </div>
-    </div>
-</section>
-<!------------------------ Footer ---------------------------------->
-<footer>
-    <div class="container">
-        <div class="content">
-            Copyright 2022. Made by Regit JSC
-        </div>
-    </div>
-</footer>
-    <!------------------------ Script ---------------------------------->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
-    <script src="./js/detail-blog.js"></script>
-    <!------------------------ Code-end ---------------------------------->
-</body>
+        </footer>
+        <!------------------------ Script ---------------------------------->
+        <script src="./js/detail-blog.js"></script>
+        <!------------------------ Code-end ---------------------------------->
+    </body>
 </html>
