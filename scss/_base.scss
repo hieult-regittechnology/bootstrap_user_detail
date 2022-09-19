@@ -1,0 +1,23 @@
+$redMainColor: #c40000;
+$whiteMainColor: #ffffff;
+
+@mixin mainFontAndColor($font-size, $font-weight, $line-height, $color) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    font-style: normal;
+    line-height: $line-height;
+    font-family: Noto Sans JP;
+    color: $color;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin mobile {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}

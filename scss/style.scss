@@ -1,0 +1,270 @@
+/*-----------------General---------------------------------*/
+@import "./base";
+@import "./components";
+
+/*-----------------Header---------------------------------*/
+header {
+    padding: 31px 0;
+    position: fixed;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.65);
+    box-shadow: 0px 1px 14px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    @include mobile {
+        padding: 10px 0;
+        background-color: $whiteMainColor;
+    }
+    .container {
+        .row {
+            .mobile-header {
+                display: none;
+                @include mobile {
+                    @include flex;
+                }
+                .header-logo {
+                    @include flex;
+                }
+                .logo-title {
+                    @include mainFontAndColor(16.5px, 700, 28.96px, #000000);
+                }
+                .hamburger {
+                    display: none;
+                    @include mobile {
+                        display: block;
+                        cursor: pointer;
+                        &.active {
+                            .bar:nth-child(2) {
+                                opacity: 0;
+                            }
+                            .bar:nth-child(1) {
+                                transform: translateY(8px) rotate(45deg);
+                            }
+                            .bar:nth-child(3) {
+                                transform: translateY(-8px) rotate(-45deg);
+                            }
+                        }
+                    }
+                    .bar {
+                        display: block;
+                        width: 25px;
+                        height: 3px;
+                        margin: 5px 10px;
+                        -webkit-transition: all 0.3s ease-in-out;
+                        transition: all 0.3s ease-in-out;
+                        background-color: #101010;
+                    }
+                }
+                @include mobile {
+                    img {
+                        float: right;
+                    }
+                }
+            }
+            .pc-header {
+                @include flex;
+                @include mobile {
+                    display: none;
+                }
+                .header-logo {
+                    @include flex;
+                    float: left;
+                    .logo-title {
+                        @include mainFontAndColor(20px, 700, 21.72px, #000000);
+                    }
+                }
+                .search-form {
+                    .form-group {
+                        input {
+                            border: 1px solid #d4d4d4;
+                            width: 311px;
+                            height: 37.5px;
+                            border-radius: 4px;
+                            padding: 0 0 0 15px;
+                        }
+                        input::placeholder {
+                            @include mainFontAndColor(15px, 500, 21.72px, #d4d1d4);
+                        }
+                        .search-span {
+                            color: #a7a7a7;
+                            margin: 0 0 5px -30px;
+                        }
+                    }
+                }
+                .header-menu {
+                    @include flex;
+                    @include mainFontAndColor(15px, 500, 21.72px, #212121);
+                    .header-menu-item {
+                        padding: 15px;
+                    }
+                    button {
+                        background-color: rgba(255, 255, 255, 0.65);
+                        height: 30px;
+                        width: 50px;
+                        @include mainFontAndColor(15px, 500, 21.72px, #212121);
+                        border-radius: 3px;
+                    }
+                }
+                .header-account {
+                    float: right;
+                    @include flex;
+                    @include mainFontAndColor(15px, 500, 21.72px, #212121);
+                    .nav-link {
+                        padding: 15px;
+                    }
+                    .account-circle {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+/*-----------------Posts---------------------------------*/
+.posts {
+    .container {
+        @include mobile {
+            max-width: 350px;
+        }
+        .direction {
+            margin: 160px 0 40px 0;
+            @include mainFontAndColor(16px, 700, 23.17px, #212121);
+            .home-direction {
+                color: #afafaf;
+            }
+            .arrow-direction {
+                color: #a19f9f;
+            }
+        }
+        .title {
+            margin: 0 0 40px 0;
+            @include mainFontAndColor(18px, 700, 26.06px, #000000);
+        }
+        .info {
+            @include flex;
+            justify-content: flex-start;
+            .user-info {
+                margin: 8px;
+                h5 {
+                    @include mainFontAndColor(12px, 800, 17.38px, #000000);
+                }
+                h6 {
+                    @include mainFontAndColor(11px, 400, 16px, #a7a7a7);
+                }
+            }
+        }
+        .button1 {
+            @include flex;
+            justify-content: flex-end;
+            .not-approved {
+                @include mainFontAndColor(15px, 500, 22px, $whiteMainColor);
+                margin: 0 -40px 0 0;
+                @include mobile {
+                    margin: 0 -30px 0 0;
+                    font-size: 10px;
+                }
+            }
+        }
+        .button2 {
+            @include flex;
+            justify-content: flex-end;
+            .delete-post {
+                @include mainFontAndColor(15px, 500, 22px, $whiteMainColor);
+                background-color: #dc3545;
+                border-radius: 3px;
+                @include mobile {
+                    font-size: 10px;
+                }
+            }
+        }
+        .title-image {
+            img {
+                width: 100%;
+                height: auto;
+                margin: 40px 0;
+                @include mobile {
+                    height: 300px;
+                }
+            }
+        }
+        .content {
+            @include mainFontAndColor(14px, 400, 20px, #747474);
+            margin: 0 0 55px 0;
+        }
+        .related {
+            text-align: center;
+            @include mainFontAndColor(24px, 700, 35px, #212121);
+        }
+        .line {
+            margin: 0 0 29px 0;
+            text-align: center;
+        }
+        .related-post {
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            margin: 0 0 81px 0;
+            @include mobile {
+                margin: 0 0 30px 0;
+            }
+            img {
+                width: 100%;
+                height: 200px;
+                border-radius: 8px 8px 0 0;
+                @include mobile {
+                    height: 120px;
+                }
+            }
+            h3 {
+                margin: 15px 0 35px 0;
+                @include mainFontAndColor(17px, 700, 28px, #000000);
+            }
+        }
+        .avatar-comment {
+            @include flex;
+        }
+        .comment-textarea {
+            @include flex;
+            textarea {
+                margin: 30px auto;
+                width: 100%;
+                height: 82px;
+                resize: none;
+                border: 1px solid #e1e1e1;
+                border-radius: 4px;
+                @include mobile {
+                    height: 50px;
+                }
+            }
+        }
+        .comment-username {
+            @include flex;
+            justify-content: flex-start;
+            @include mainFontAndColor(24px, 700, 35px, #212121);
+        }
+        .comment-content {
+            @include flex;
+            justify-content: flex-start;
+            @include mainFontAndColor(14px, 400, 20px, #212121);
+        }
+        .comment-time {
+            @include flex;
+            justify-content: flex-start;
+            h6 {
+                margin: 6px 40px 60px 0;
+                @include mainFontAndColor(14px, 400, 20px, #747474);
+                a {
+                    @include mainFontAndColor(14px, 400, 20px, #747474);
+                }
+            }
+        }
+    }
+}
+
+/*-----------------Footer---------------------------------*/
+footer {
+    background-color: #000000;
+    .content {
+        text-align: center;
+        padding: 40px;
+        @include mainFontAndColor(15px, 500, 22px, $whiteMainColor);
+    }
+}
