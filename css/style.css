@@ -123,7 +123,7 @@ header .container .row .pc-header .search-form .form-group input {
   width: 311px;
   height: 37.5px;
   border-radius: 4px;
-  padding: 0 0 0 15px;
+  padding: 0 30px 0 15px;
 }
 header .container .row .pc-header .search-form .form-group input::placeholder {
   font-size: 15px;
@@ -138,6 +138,7 @@ header .container .row .pc-header .search-form .form-group .search-span {
   margin: 0 0 5px -30px;
 }
 header .container .row .pc-header .header-menu {
+  margin: 0 0 0 35px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,7 +150,7 @@ header .container .row .pc-header .header-menu {
   color: #212121;
 }
 header .container .row .pc-header .header-menu .header-menu-item {
-  padding: 15px;
+  padding: 0 0 0 20px;
 }
 header .container .row .pc-header .header-menu button {
   background-color: rgba(255, 255, 255, 0.65);
@@ -308,8 +309,15 @@ header .container .row .pc-header .header-account .account-circle {
   color: #212121;
 }
 .posts .container .line {
-  margin: 0 0 29px 0;
-  text-align: center;
+  border: 3px solid #747474;
+  background-color: #747474;
+  width: 64px;
+  height: 0;
+  margin: 18px 0 29px 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .posts .container .related-post {
   border: 1px solid #cccccc;
@@ -323,7 +331,6 @@ header .container .row .pc-header .header-account .account-circle {
 }
 .posts .container .related-post img {
   width: 100%;
-  height: 200px;
   border-radius: 8px 8px 0 0;
 }
 @media screen and (max-width: 576px) {
