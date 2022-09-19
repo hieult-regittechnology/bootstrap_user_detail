@@ -12,7 +12,7 @@ header {
     width: 100%;
     @include mobile {
         padding: 10px 0;
-        background-color: $whiteMainColor;
+        background-color: $color-1;
     }
     .container {
         .row {
@@ -25,7 +25,7 @@ header {
                     @include flex;
                 }
                 .logo-title {
-                    @include mainFontAndColor(16.5px, 700, 28.96px, #000000);
+                    @include mainFontAndColor(16.5px, 700, 28.96px, $color-2);
                 }
                 .hamburger {
                     display: none;
@@ -69,7 +69,7 @@ header {
                     @include flex;
                     float: left;
                     .logo-title {
-                        @include mainFontAndColor(20px, 700, 21.72px, #000000);
+                        @include mainFontAndColor(20px, 700, 21.72px, $color-2);
                     }
                 }
                 .search-form {
@@ -92,7 +92,7 @@ header {
                 }
                 .header-menu {
                     @include flex;
-                    @include mainFontAndColor(15px, 500, 21.72px, #212121);
+                    @include mainFontAndColor(15px, 500, 21.72px, $color-3);
                     .header-menu-item {
                         padding: 15px;
                     }
@@ -100,14 +100,14 @@ header {
                         background-color: rgba(255, 255, 255, 0.65);
                         height: 30px;
                         width: 50px;
-                        @include mainFontAndColor(15px, 500, 21.72px, #212121);
+                        @include mainFontAndColor(15px, 500, 21.72px, $color-3);
                         border-radius: 3px;
                     }
                 }
                 .header-account {
                     float: right;
                     @include flex;
-                    @include mainFontAndColor(15px, 500, 21.72px, #212121);
+                    @include mainFontAndColor(15px, 500, 21.72px, $color-3);
                     .nav-link {
                         padding: 15px;
                     }
@@ -127,7 +127,7 @@ header {
         }
         .direction {
             margin: 160px 0 40px 0;
-            @include mainFontAndColor(16px, 700, 23.17px, #212121);
+            @include mainFontAndColor(16px, 700, 23.17px, $color-3);
             .home-direction {
                 color: #afafaf;
             }
@@ -137,7 +137,7 @@ header {
         }
         .title {
             margin: 0 0 40px 0;
-            @include mainFontAndColor(18px, 700, 26.06px, #000000);
+            @include mainFontAndColor(18px, 700, 26.06px, $color-2);
         }
         .info {
             @include flex;
@@ -145,7 +145,7 @@ header {
             .user-info {
                 margin: 8px;
                 h5 {
-                    @include mainFontAndColor(12px, 800, 17.38px, #000000);
+                    @include mainFontAndColor(12px, 800, 17.38px, $color-2);
                 }
                 h6 {
                     @include mainFontAndColor(11px, 400, 16px, #a7a7a7);
@@ -156,7 +156,7 @@ header {
             @include flex;
             justify-content: flex-end;
             .not-approved {
-                @include mainFontAndColor(15px, 500, 22px, $whiteMainColor);
+                @include mainFontAndColor(15px, 500, 22px, $color-1);
                 margin: 0 -40px 0 0;
                 @include mobile {
                     margin: 0 -30px 0 0;
@@ -168,7 +168,7 @@ header {
             @include flex;
             justify-content: flex-end;
             .delete-post {
-                @include mainFontAndColor(15px, 500, 22px, $whiteMainColor);
+                @include mainFontAndColor(15px, 500, 22px, $color-1);
                 background-color: #dc3545;
                 border-radius: 3px;
                 @include mobile {
@@ -187,12 +187,12 @@ header {
             }
         }
         .content {
-            @include mainFontAndColor(14px, 400, 20px, #747474);
+            @include mainFontAndColor(14px, 400, 20px, $mainColor);
             margin: 0 0 55px 0;
         }
         .related {
             text-align: center;
-            @include mainFontAndColor(24px, 700, 35px, #212121);
+            @include mainFontAndColor(24px, 700, 35px, $color-3);
         }
         .line {
             margin: 0 0 29px 0;
@@ -215,7 +215,7 @@ header {
             }
             h3 {
                 margin: 15px 0 35px 0;
-                @include mainFontAndColor(17px, 700, 28px, #000000);
+                @include mainFontAndColor(17px, 700, 28px, $color-2);
             }
         }
         .avatar-comment {
@@ -237,21 +237,21 @@ header {
         .comment-username {
             @include flex;
             justify-content: flex-start;
-            @include mainFontAndColor(24px, 700, 35px, #212121);
+            @include mainFontAndColor(24px, 700, 35px, $color-3);
         }
         .comment-content {
             @include flex;
             justify-content: flex-start;
-            @include mainFontAndColor(14px, 400, 20px, #212121);
+            @include mainFontAndColor(14px, 400, 20px, $color-3);
         }
         .comment-time {
             @include flex;
             justify-content: flex-start;
             h6 {
                 margin: 6px 40px 60px 0;
-                @include mainFontAndColor(14px, 400, 20px, #747474);
+                @include mainFontAndColor(14px, 400, 20px, $mainColor);
                 a {
-                    @include mainFontAndColor(14px, 400, 20px, #747474);
+                    @include mainFontAndColor(14px, 400, 20px, $mainColor);
                 }
             }
         }
@@ -260,10 +260,10 @@ header {
 
 /*-----------------Footer---------------------------------*/
 footer {
-    background-color: #000000;
+    background-color: $color-2;
     .content {
         text-align: center;
         padding: 40px;
-        @include mainFontAndColor(15px, 500, 22px, $whiteMainColor);
+        @include mainFontAndColor(15px, 500, 22px, $color-1);
     }
 }
