@@ -1,0 +1,276 @@
+/*-----------------General---------------------------------*/
+@import "./base";
+@import "./components";
+
+/*-----------------Header---------------------------------*/
+header {
+    padding: 31px 0;
+    position: fixed;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.65);
+    box-shadow: 0px 1px 14px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    @include mobile {
+        padding: 10px 0;
+        background-color: $white;
+    }
+    .container {
+        .row {
+            .mobile-header {
+                display: none;
+                @include mobile {
+                    @include flex;
+                }
+                .header-logo {
+                    @include flex;
+                }
+                .logo-title {
+                    @include mainFontAndColor(16.5px, 700, 28.96px, $black);
+                }
+                .hamburger {
+                    display: none;
+                    @include mobile {
+                        display: block;
+                        cursor: pointer;
+                        &.active {
+                            .bar:nth-child(2) {
+                                opacity: 0;
+                            }
+                            .bar:nth-child(1) {
+                                transform: translateY(8px) rotate(45deg);
+                            }
+                            .bar:nth-child(3) {
+                                transform: translateY(-8px) rotate(-45deg);
+                            }
+                        }
+                    }
+                    .bar {
+                        display: block;
+                        width: 25px;
+                        height: 3px;
+                        margin: 5px 10px;
+                        -webkit-transition: all 0.3s ease-in-out;
+                        transition: all 0.3s ease-in-out;
+                        background-color: #101010;
+                    }
+                }
+                @include mobile {
+                    img {
+                        float: right;
+                    }
+                }
+            }
+            .pc-header {
+                @include flex;
+                @include mobile {
+                    display: none;
+                }
+                .header-logo {
+                    @include flex;
+                    float: left;
+                    .logo-title {
+                        @include mainFontAndColor(20px, 700, 21.72px, $black);
+                    }
+                }
+                .search-form {
+                    margin: 0 0 0 -15px;
+                    .form-group {
+                        input {
+                            border: 1px solid #d4d4d4;
+                            width: 311px;
+                            height: 37.5px;
+                            border-radius: 4px;
+                            padding: 0 30px 0 15px;
+                        }
+                        input::placeholder {
+                            @include mainFontAndColor(15px, 500, 21.72px, #d4d1d4);
+                        }
+                        .search-span {
+                            color: #a7a7a7;
+                            margin: 0 0 5px -30px;
+                        }
+                    }
+                }
+                .header-menu {
+                    margin: 0 0 0 35px;
+                    @include flex;
+                    @include mainFontAndColor(15px, 500, 21.72px, $color-1);
+                    .header-menu-item {
+                        padding: 0 0 0 20px;
+                    }
+                    button {
+                        background-color: rgba(255, 255, 255, 0.65);
+                        height: 30px;
+                        width: 50px;
+                        @include mainFontAndColor(15px, 500, 21.72px, $color-1);
+                        border-radius: 3px;
+                    }
+                }
+                .header-account {
+                    float: right;
+                    @include flex;
+                    @include mainFontAndColor(15px, 500, 21.72px, $color-1);
+                    .nav-link {
+                        padding: 12px;
+                    }
+                    .account-circle {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+/*-----------------Posts---------------------------------*/
+.posts {
+    .container {
+        @include mobile {
+            max-width: 430px;
+        }
+        .direction {
+            margin: 160px 0 40px 0;
+            @include mainFontAndColor(16px, 700, 23.17px, $color-1);
+            .home-direction {
+                color: #afafaf;
+            }
+            .arrow-direction {
+                color: #a19f9f;
+            }
+        }
+        .title {
+            margin: 0 0 40px 0;
+            @include mainFontAndColor(18px, 700, 26.06px, $black);
+        }
+        .info {
+            @include flex;
+            justify-content: flex-start;
+            .user-info {
+                margin: 8px;
+                h5 {
+                    @include mainFontAndColor(12px, 800, 17.38px, $black);
+                }
+                h6 {
+                    @include mainFontAndColor(11px, 400, 16px, #a7a7a7);
+                }
+            }
+        }
+        .button-not-approved {
+            @include flex;
+            justify-content: flex-end;
+            .not-approved {
+                @include mainFontAndColor(15px, 500, 22px, $white);
+                margin: 0 -60px 0 0;
+                @include mobile {
+                    margin: 0 -50px 0 0;
+                    font-size: 10px;
+                }
+            }
+        }
+        .button-delete-post {
+            @include flex;
+            justify-content: flex-end;
+            .delete-post {
+                @include mainFontAndColor(15px, 500, 22px, $white);
+                background-color: #dc3545;
+                border-radius: 3px;
+                @include mobile {
+                    font-size: 10px;
+                }
+            }
+        }
+        .title-image {
+            img {
+                width: 100%;
+                height: auto;
+                margin: 40px 0;
+                @include mobile {
+                    height: 300px;
+                }
+            }
+        }
+        .content {
+            @include mainFontAndColor(14px, 400, 20px, $mainColor);
+            margin: 0 0 55px 0;
+        }
+        .related {
+            text-align: center;
+            @include mainFontAndColor(24px, 700, 35px, $color-1);
+        }
+        .line {
+            border: 3px solid $mainColor;
+            background-color: $mainColor;
+            width: 64px;
+            height: 0;
+            margin: 18px 0 29px 0;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .related-post {
+            border: 1px solid #cccccc;
+            border-radius: 10px;
+            margin: 0 0 81px 0;
+            @include mobile {
+                margin: 0 0 30px 0;
+            }
+            img {
+                width: 100%;
+                @include mobile {
+                    height: 120px;
+                }
+            }
+            h3 {
+                margin: 15px 0 35px 0;
+                @include mainFontAndColor(17px, 700, 28px, $black);
+            }
+        }
+        .avatar-comment {
+            @include flex;
+        }
+        .comment-textarea {
+            @include flex;
+            textarea {
+                margin: 30px auto;
+                width: 100%;
+                resize: none;
+                border: 1px solid #e1e1e1;
+                border-radius: 4px;
+                @include mobile {
+                    height: 50px;
+                }
+            }
+        }
+        .comment-username {
+            @include flex;
+            justify-content: flex-start;
+            @include mainFontAndColor(24px, 700, 35px, $color-1);
+        }
+        .comment-content {
+            @include flex;
+            justify-content: flex-start;
+            @include mainFontAndColor(14px, 400, 20px, $color-1);
+        }
+        .comment-time {
+            @include flex;
+            justify-content: flex-start;
+            h6 {
+                margin: 6px 40px 60px 0;
+                @include mainFontAndColor(14px, 400, 20px, $mainColor);
+                a {
+                    @include mainFontAndColor(14px, 400, 20px, $mainColor);
+                }
+            }
+        }
+    }
+}
+
+/*-----------------Footer---------------------------------*/
+footer {
+    background-color: $black;
+    .content {
+        text-align: center;
+        padding: 40px;
+        @include mainFontAndColor(15px, 500, 22px, $white);
+    }
+}

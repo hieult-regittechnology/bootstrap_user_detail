@@ -1,0 +1,23 @@
+{
+    "name": "bootstrap---scss---2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "compile:css": "sass --watch scss/style.scss css/style.css",
+        "compile:all": "sass --watch scss:css"
+    },
+    "devDependencies": {
+        "css-loader": "^6.7.1",
+        "node-sass": "^7.0.3",
+        "sass": "^1.54.9",
+        "sass-loader": "^13.0.2",
+        "style-loader": "^3.3.1",
+        "vite": "^3.1.0"
+    },
+    "author": "",
+    "license": "ISC"
+}

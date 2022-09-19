@@ -1,0 +1,437 @@
+/*-----------------General---------------------------------*/
+@font-face {
+  font-family: Noto Sans JP;
+  src: url(../assets/fonts/NotoSansJP-Regular.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+/*-----------------Header---------------------------------*/
+header {
+  padding: 31px 0;
+  position: fixed;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.65);
+  box-shadow: 0px 1px 14px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+@media screen and (max-width: 576px) {
+  header {
+    padding: 10px 0;
+    background-color: #ffffff;
+  }
+}
+header .container .row .mobile-header {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  header .container .row .mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+header .container .row .mobile-header .header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .container .row .mobile-header .logo-title {
+  font-size: 16.5px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 28.96px;
+  font-family: Noto Sans JP;
+  color: #000000;
+}
+header .container .row .mobile-header .hamburger {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  header .container .row .mobile-header .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  header .container .row .mobile-header .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  header .container .row .mobile-header .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  header .container .row .mobile-header .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+header .container .row .mobile-header .hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+@media screen and (max-width: 576px) {
+  header .container .row .mobile-header img {
+    float: right;
+  }
+}
+header .container .row .pc-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 576px) {
+  header .container .row .pc-header {
+    display: none;
+  }
+}
+header .container .row .pc-header .header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+header .container .row .pc-header .header-logo .logo-title {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 21.72px;
+  font-family: Noto Sans JP;
+  color: #000000;
+}
+header .container .row .pc-header .search-form {
+  margin: 0 0 0 -15px;
+}
+header .container .row .pc-header .search-form .form-group input {
+  border: 1px solid #d4d4d4;
+  width: 311px;
+  height: 37.5px;
+  border-radius: 4px;
+  padding: 0 30px 0 15px;
+}
+header .container .row .pc-header .search-form .form-group input::placeholder {
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 21.72px;
+  font-family: Noto Sans JP;
+  color: #d4d1d4;
+}
+header .container .row .pc-header .search-form .form-group .search-span {
+  color: #a7a7a7;
+  margin: 0 0 5px -30px;
+}
+header .container .row .pc-header .header-menu {
+  margin: 0 0 0 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 21.72px;
+  font-family: Noto Sans JP;
+  color: #212121;
+}
+header .container .row .pc-header .header-menu .header-menu-item {
+  padding: 0 0 0 20px;
+}
+header .container .row .pc-header .header-menu button {
+  background-color: rgba(255, 255, 255, 0.65);
+  height: 30px;
+  width: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 21.72px;
+  font-family: Noto Sans JP;
+  color: #212121;
+  border-radius: 3px;
+}
+header .container .row .pc-header .header-account {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 21.72px;
+  font-family: Noto Sans JP;
+  color: #212121;
+}
+header .container .row .pc-header .header-account .nav-link {
+  padding: 12px;
+}
+header .container .row .pc-header .header-account .account-circle {
+  font-weight: bold;
+}
+
+/*-----------------Posts---------------------------------*/
+@media screen and (max-width: 576px) {
+  .posts .container {
+    max-width: 430px;
+  }
+}
+.posts .container .direction {
+  margin: 160px 0 40px 0;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 23.17px;
+  font-family: Noto Sans JP;
+  color: #212121;
+}
+.posts .container .direction .home-direction {
+  color: #afafaf;
+}
+.posts .container .direction .arrow-direction {
+  color: #a19f9f;
+}
+.posts .container .title {
+  margin: 0 0 40px 0;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 26.06px;
+  font-family: Noto Sans JP;
+  color: #000000;
+}
+.posts .container .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+}
+.posts .container .info .user-info {
+  margin: 8px;
+}
+.posts .container .info .user-info h5 {
+  font-size: 12px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 17.38px;
+  font-family: Noto Sans JP;
+  color: #000000;
+}
+.posts .container .info .user-info h6 {
+  font-size: 11px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 16px;
+  font-family: Noto Sans JP;
+  color: #a7a7a7;
+}
+.posts .container .button-not-approved {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-end;
+}
+.posts .container .button-not-approved .not-approved {
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 22px;
+  font-family: Noto Sans JP;
+  color: #ffffff;
+  margin: 0 -60px 0 0;
+}
+@media screen and (max-width: 576px) {
+  .posts .container .button-not-approved .not-approved {
+    margin: 0 -50px 0 0;
+    font-size: 10px;
+  }
+}
+.posts .container .button-delete-post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-end;
+}
+.posts .container .button-delete-post .delete-post {
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 22px;
+  font-family: Noto Sans JP;
+  color: #ffffff;
+  background-color: #dc3545;
+  border-radius: 3px;
+}
+@media screen and (max-width: 576px) {
+  .posts .container .button-delete-post .delete-post {
+    font-size: 10px;
+  }
+}
+.posts .container .title-image img {
+  width: 100%;
+  height: auto;
+  margin: 40px 0;
+}
+@media screen and (max-width: 576px) {
+  .posts .container .title-image img {
+    height: 300px;
+  }
+}
+.posts .container .content {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  font-family: Noto Sans JP;
+  color: #747474;
+  margin: 0 0 55px 0;
+}
+.posts .container .related {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 35px;
+  font-family: Noto Sans JP;
+  color: #212121;
+}
+.posts .container .line {
+  border: 3px solid #747474;
+  background-color: #747474;
+  width: 64px;
+  height: 0;
+  margin: 18px 0 29px 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.posts .container .related-post {
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  margin: 0 0 81px 0;
+}
+@media screen and (max-width: 576px) {
+  .posts .container .related-post {
+    margin: 0 0 30px 0;
+  }
+}
+.posts .container .related-post img {
+  width: 100%;
+}
+@media screen and (max-width: 576px) {
+  .posts .container .related-post img {
+    height: 120px;
+  }
+}
+.posts .container .related-post h3 {
+  margin: 15px 0 35px 0;
+  font-size: 17px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 28px;
+  font-family: Noto Sans JP;
+  color: #000000;
+}
+.posts .container .avatar-comment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.posts .container .comment-textarea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.posts .container .comment-textarea textarea {
+  margin: 30px auto;
+  width: 100%;
+  resize: none;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+}
+@media screen and (max-width: 576px) {
+  .posts .container .comment-textarea textarea {
+    height: 50px;
+  }
+}
+.posts .container .comment-username {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 35px;
+  font-family: Noto Sans JP;
+  color: #212121;
+}
+.posts .container .comment-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  font-family: Noto Sans JP;
+  color: #212121;
+}
+.posts .container .comment-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+}
+.posts .container .comment-time h6 {
+  margin: 6px 40px 60px 0;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  font-family: Noto Sans JP;
+  color: #747474;
+}
+.posts .container .comment-time h6 a {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  font-family: Noto Sans JP;
+  color: #747474;
+}
+
+/*-----------------Footer---------------------------------*/
+footer {
+  background-color: #000000;
+}
+footer .content {
+  text-align: center;
+  padding: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 22px;
+  font-family: Noto Sans JP;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */
