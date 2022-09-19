@@ -1,7 +1,7 @@
 $mainColor: #747474;
-$color-1: #ffffff;
-$color-2: #000000;
-$color-3: #212121;
+$white: #ffffff;
+$black: #000000;
+$color-1: #212121;
 
 @mixin mainFontAndColor($font-size, $font-weight, $line-height, $color) {
     font-size: $font-size;
