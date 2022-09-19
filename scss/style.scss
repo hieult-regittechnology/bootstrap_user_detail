@@ -209,14 +209,13 @@ header {
         }
         .related-post {
             border: 1px solid #cccccc;
-            border-radius: 8px;
+            border-radius: 10px;
             margin: 0 0 81px 0;
             @include mobile {
                 margin: 0 0 30px 0;
             }
             img {
                 width: 100%;
-                border-radius: 8px 8px 0 0;
                 @include mobile {
                     height: 120px;
                 }
