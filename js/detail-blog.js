@@ -27,7 +27,8 @@ window.onscroll = function() {
     } else if (currentScrollPos <= 100) {
         document.getElementById("header").style.top = "0";
     } else {
-        document.getElementById("header").style.top = "-100px";
+        document.getElementById("header").style.top = "-200px";
+        document.getElementById("header").style.transition = "all 0.8s";
     }
     prevScrollpos = currentScrollPos;
 }
